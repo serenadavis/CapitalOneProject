@@ -1,0 +1,102 @@
+<html>
+
+<!DOCTYPE html>
+<html lang="en">
+ 
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="{{url_for('static', filename='favicon.ico')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="{{url_for('static', filename='steam/js/bootstrap-notify.min.js')}}"></script>
+</head>
+ 
+<body>
+   
+  <nav class="navbar navbar-inverse" >
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
+        <div class="navbar-brand">
+         Loan Dolphins: Your Profile
+        </div>
+      </div>
+      
+      <form>
+        <input type="button" value="Your Profile" onclick="window.location.href='Profile.html'" />
+      </form>
+
+      
+      
+    </div>
+  </nav>
+
+    <div class="container" style="">
+      <strong>Name:</strong> {{username}} <br>
+      <br>
+      <strong>Reliability Score:</strong><br>
+      <br>
+      <strong>Age:</strong><br>
+      <br>
+      <strong>Highest Level of Education:</strong><br>
+      <br>
+      <strong>Loan History Outside of Loan Dolphins:</strong><br>
+      <br>
+      <!-- Trigger the modal with a button -->
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Profile</button>
+
+
+      <!-- Modal -->
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Edit Profile</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                <form>
+                  <strong>Name (First Last):</strong><br>
+                  <input type="text" name="Name" value="First Last"><br>
+                  <strong>Age:</strong><br>
+                  <input type="number" name="Age" value="50"><br>
+                  <strong>Location:</strong><br>
+                  <strong>Highest Level of Education:</strong><br>
+                  <select>
+                    <option value="Graduate/Professional Degree">Graduate/Professional Degree</option>
+                    <option value="Undergraduate Degree">Undergraduate Degree</option>
+                    <option value="High School Diploma">High School Diploma</option>
+                    <option value="None of the Above">None of the Above</option>
+                  </select><br>
+                  <strong>Loan History Outside of Loan Dolphins:</strong><br>
+                  <input type="text" name="LoanHistory" value =""><br>
+              </form>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Done</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+  </div>
+ 
+  <script>
+ 
+  </script> 
+  
+</body>
+</html>
