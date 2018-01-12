@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% set active_page = "edit_profile" %}
+
+{% block css %}
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+
+{% block title %}
+  Edit Profile
+{% endblock %}
+
+{% block main %}
+  <div class="container" style="">
+    <strong>Name:</strong><br>
+    <strong>Reliability Score:</strong><br>
+    <strong>Age:</strong><br>
+    <strong>Location:</strong><br>
+    <strong>Highest Level of Education:</strong><br>
+    <select>
+      <option value="Graduate/Professional Degree">Graduate/Professional Degree</option>
+      <option value="Undergraduate Degree">Undergraduate Degree</option>
+      <option value="High School Diploma">High School Diploma</option>
+      <option value="None of the Above">None of the Above</option>
+    </select><br>
+    <strong>Loan History Outside of Microlending:</strong><br>
+    <div id="button"><a href="Profile.html">Done</a></div>
+  </div>
+{% endblock %}

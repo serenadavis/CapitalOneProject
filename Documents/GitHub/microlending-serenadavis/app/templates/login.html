@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% set active_page = "edit_profile" %}
+
+{% block css %}
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+
+{% block title %}
+  Edit Profile
+{% endblock %}
+
+{% block main %}
+  <div class="container">
+    <h1 class="form-heading">Log In</h1>
+    <!-- create form for the user to log in -->
+    <hr>
+    <form action="{{ url_for('login') }}" method="post" data-toggle="validator">
+        <fieldset>
+            <div class="form-group">
+            <!-- textfield for the user's username -->
+                <input autocomplete="off" class="form-control" name="email" placeholder="Email" type="text" required/>
+                <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+            <!-- for the user's password -->
+                <input class="form-control" name="password" placeholder="Password" type="password" required/>
+                <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+                <!-- button to log in -->
+                <button class="btn btn-danger" type="submit">Log In</button>
+            </div>
+        </fieldset>
+    </form>
+  </div>
+{% endblock %}

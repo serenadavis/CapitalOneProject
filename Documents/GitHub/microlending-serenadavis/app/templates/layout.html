@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!-- documentation at http://getbootstrap.com/, alternative themes at https://www.bootstrapcdn.com/bootswatch/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+        <!-- Custom CSS -->
+        <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet"/>
+        {% block css %}{% endblock %}
+
+        <!-- meta data on website -->
+        <meta charset="utf-8"/>
+        <meta content="initial-scale=1, width=device-width" name="viewport"/>
+        <meta name="description" content="microloan application">
+        <meta name="author" content="Capital One Hackathon">
+        <meta name="keywords" content="capital one hackathon, microloans">
+
+        <!-- import JavaScript files -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        {% block js %}{% endblock %}
+
+
+        <title>{% block title %}{% endblock %} - Microloans</title>
+
+        <!-- used for dynamic URL routing in $.post requests -->
+        {{ JSGlue.include() }}
+    </head>
+    <body>
+        <!-- nav bar -->
+        <main>
+            {% block main %}{% endblock %}
+        </main>
+    </body>
+</html>
